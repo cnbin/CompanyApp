@@ -23,6 +23,7 @@
 		1892BC301BB92085003CAC4C /* TYTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC241BB92085003CAC4C /* TYTextContainer.m */; settings = {ASSET_TAGS = (); }; };
 		1892BC311BB92085003CAC4C /* TYTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC261BB92085003CAC4C /* TYTextStorage.m */; settings = {ASSET_TAGS = (); }; };
 		1892BC321BB92085003CAC4C /* TYViewStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC291BB92085003CAC4C /* TYViewStorage.m */; settings = {ASSET_TAGS = (); }; };
+		1892BC361BB93816003CAC4C /* DianXingYingYongTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC351BB93816003CAC4C /* DianXingYingYongTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		1892BC271BB92085003CAC4C /* TYTextStorageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTextStorageProtocol.h; sourceTree = "<group>"; };
 		1892BC281BB92085003CAC4C /* TYViewStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYViewStorage.h; sourceTree = "<group>"; };
 		1892BC291BB92085003CAC4C /* TYViewStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYViewStorage.m; sourceTree = "<group>"; };
+		1892BC341BB93816003CAC4C /* DianXingYingYongTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianXingYingYongTableViewController.h; sourceTree = "<group>"; };
+		1892BC351BB93816003CAC4C /* DianXingYingYongTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianXingYingYongTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				1892BC161BB9205C003CAC4C /* 3rdParty */,
+				1892BC331BB937DF003CAC4C /* DianXingYingYong */,
 				1892BC121BB91A03003CAC4C /* ShouYe */,
 				1892BBFE1BB91898003CAC4C /* AppDelegate.h */,
 				1892BBFF1BB91898003CAC4C /* AppDelegate.m */,
@@ -151,6 +155,15 @@
 				1892BC291BB92085003CAC4C /* TYViewStorage.m */,
 			);
 			path = TYAttributedLabel;
+			sourceTree = "<group>";
+		};
+		1892BC331BB937DF003CAC4C /* DianXingYingYong */ = {
+			isa = PBXGroup;
+			children = (
+				1892BC341BB93816003CAC4C /* DianXingYingYongTableViewController.h */,
+				1892BC351BB93816003CAC4C /* DianXingYingYongTableViewController.m */,
+			);
+			name = DianXingYingYong;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +249,7 @@
 				1892BC311BB92085003CAC4C /* TYTextStorage.m in Sources */,
 				1892BC2B1BB92085003CAC4C /* TYAttributedLabel.m in Sources */,
 				1892BC301BB92085003CAC4C /* TYTextContainer.m in Sources */,
+				1892BC361BB93816003CAC4C /* DianXingYingYongTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
