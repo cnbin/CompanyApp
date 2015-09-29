@@ -1,0 +1,11 @@
+//
+//  PrefixHeader.pch
+//  华讯网络
+//
+//  Created by Apple on 9/29/15.
+//  Copyright © 2015 cnbin. All rights reserved.
+//
+
+#import "TYAttributedLabel.h"
+
+#define SystemThemeColor [UIColor colorWithRed:0 green:199.0f/255.0f blue:140.0f/255.0f alpha:1.0f]

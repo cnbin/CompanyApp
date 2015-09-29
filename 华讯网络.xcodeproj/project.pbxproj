@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1892BBFD1BB91898003CAC4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BBFC1BB91898003CAC4C /* main.m */; };
 		1892BC001BB91898003CAC4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BBFF1BB91898003CAC4C /* AppDelegate.m */; };
-		1892BC031BB91898003CAC4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC021BB91898003CAC4C /* ViewController.m */; };
 		1892BC061BB91898003CAC4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1892BC041BB91898003CAC4C /* Main.storyboard */; };
 		1892BC081BB91898003CAC4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1892BC071BB91898003CAC4C /* Assets.xcassets */; };
 		1892BC0B1BB91898003CAC4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1892BC091BB91898003CAC4C /* LaunchScreen.storyboard */; };
@@ -24,6 +23,12 @@
 		1892BC311BB92085003CAC4C /* TYTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC261BB92085003CAC4C /* TYTextStorage.m */; settings = {ASSET_TAGS = (); }; };
 		1892BC321BB92085003CAC4C /* TYViewStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC291BB92085003CAC4C /* TYViewStorage.m */; settings = {ASSET_TAGS = (); }; };
 		1892BC361BB93816003CAC4C /* DianXingYingYongTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC351BB93816003CAC4C /* DianXingYingYongTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1892BC3A1BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC391BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		1892BC3D1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892BC3C1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.m */; settings = {ASSET_TAGS = (); }; };
+		189F449A1BBA2BA900B17F63 /* dianXing.json in Resources */ = {isa = PBXBuildFile; fileRef = 189F44991BBA2BA900B17F63 /* dianXing.json */; settings = {ASSET_TAGS = (); }; };
+		18BD81A91BBA39EC009D2C54 /* zhuYaoYeWu.json in Resources */ = {isa = PBXBuildFile; fileRef = 18BD81A81BBA39EC009D2C54 /* zhuYaoYeWu.json */; settings = {ASSET_TAGS = (); }; };
+		18BD81AD1BBA3E0D009D2C54 /* LianXiHuaXunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BD81AC1BBA3E0D009D2C54 /* LianXiHuaXunViewController.m */; settings = {ASSET_TAGS = (); }; };
+		18BD81AF1BBA3F09009D2C54 /* lianXiHuaXun.json in Resources */ = {isa = PBXBuildFile; fileRef = 18BD81AE1BBA3F09009D2C54 /* lianXiHuaXun.json */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +36,6 @@
 		1892BBFC1BB91898003CAC4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1892BBFE1BB91898003CAC4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1892BBFF1BB91898003CAC4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1892BC011BB91898003CAC4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1892BC021BB91898003CAC4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1892BC051BB91898003CAC4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1892BC071BB91898003CAC4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1892BC0A1BB91898003CAC4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +62,16 @@
 		1892BC291BB92085003CAC4C /* TYViewStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYViewStorage.m; sourceTree = "<group>"; };
 		1892BC341BB93816003CAC4C /* DianXingYingYongTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianXingYingYongTableViewController.h; sourceTree = "<group>"; };
 		1892BC351BB93816003CAC4C /* DianXingYingYongTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianXingYingYongTableViewController.m; sourceTree = "<group>"; };
+		1892BC381BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuYaoYeWuTableViewController.h; sourceTree = "<group>"; };
+		1892BC391BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuYaoYeWuTableViewController.m; sourceTree = "<group>"; };
+		1892BC3B1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailDianXingYingYongViewController.h; sourceTree = "<group>"; };
+		1892BC3C1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailDianXingYingYongViewController.m; sourceTree = "<group>"; };
+		1892BC3E1BBA1D6B003CAC4C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		189F44991BBA2BA900B17F63 /* dianXing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dianXing.json; sourceTree = "<group>"; };
+		18BD81A81BBA39EC009D2C54 /* zhuYaoYeWu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zhuYaoYeWu.json; sourceTree = "<group>"; };
+		18BD81AB1BBA3E0D009D2C54 /* LianXiHuaXunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LianXiHuaXunViewController.h; sourceTree = "<group>"; };
+		18BD81AC1BBA3E0D009D2C54 /* LianXiHuaXunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LianXiHuaXunViewController.m; sourceTree = "<group>"; };
+		18BD81AE1BBA3F09009D2C54 /* lianXiHuaXun.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lianXiHuaXun.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +104,13 @@
 		1892BBFA1BB91898003CAC4C /* 华讯网络 */ = {
 			isa = PBXGroup;
 			children = (
+				18BD81AA1BBA3DE3009D2C54 /* LianXiHuaXun */,
+				1892BC371BBA1A84003CAC4C /* ZhuYaoYeWu */,
 				1892BC161BB9205C003CAC4C /* 3rdParty */,
 				1892BC331BB937DF003CAC4C /* DianXingYingYong */,
 				1892BC121BB91A03003CAC4C /* ShouYe */,
 				1892BBFE1BB91898003CAC4C /* AppDelegate.h */,
 				1892BBFF1BB91898003CAC4C /* AppDelegate.m */,
-				1892BC011BB91898003CAC4C /* ViewController.h */,
-				1892BC021BB91898003CAC4C /* ViewController.m */,
 				1892BC041BB91898003CAC4C /* Main.storyboard */,
 				1892BC071BB91898003CAC4C /* Assets.xcassets */,
 				1892BC091BB91898003CAC4C /* LaunchScreen.storyboard */,
@@ -110,6 +123,7 @@
 		1892BBFB1BB91898003CAC4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1892BC3E1BBA1D6B003CAC4C /* PrefixHeader.pch */,
 				1892BBFC1BB91898003CAC4C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -160,10 +174,33 @@
 		1892BC331BB937DF003CAC4C /* DianXingYingYong */ = {
 			isa = PBXGroup;
 			children = (
+				18BD81AE1BBA3F09009D2C54 /* lianXiHuaXun.json */,
+				18BD81A81BBA39EC009D2C54 /* zhuYaoYeWu.json */,
+				189F44991BBA2BA900B17F63 /* dianXing.json */,
 				1892BC341BB93816003CAC4C /* DianXingYingYongTableViewController.h */,
 				1892BC351BB93816003CAC4C /* DianXingYingYongTableViewController.m */,
+				1892BC3B1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.h */,
+				1892BC3C1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.m */,
 			);
 			name = DianXingYingYong;
+			sourceTree = "<group>";
+		};
+		1892BC371BBA1A84003CAC4C /* ZhuYaoYeWu */ = {
+			isa = PBXGroup;
+			children = (
+				1892BC381BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.h */,
+				1892BC391BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.m */,
+			);
+			name = ZhuYaoYeWu;
+			sourceTree = "<group>";
+		};
+		18BD81AA1BBA3DE3009D2C54 /* LianXiHuaXun */ = {
+			isa = PBXGroup;
+			children = (
+				18BD81AB1BBA3E0D009D2C54 /* LianXiHuaXunViewController.h */,
+				18BD81AC1BBA3E0D009D2C54 /* LianXiHuaXunViewController.m */,
+			);
+			name = LianXiHuaXun;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +261,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1892BC0B1BB91898003CAC4C /* LaunchScreen.storyboard in Resources */,
+				18BD81A91BBA39EC009D2C54 /* zhuYaoYeWu.json in Resources */,
 				1892BC081BB91898003CAC4C /* Assets.xcassets in Resources */,
+				189F449A1BBA2BA900B17F63 /* dianXing.json in Resources */,
 				1892BC061BB91898003CAC4C /* Main.storyboard in Resources */,
+				18BD81AF1BBA3F09009D2C54 /* lianXiHuaXun.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BD81AD1BBA3E0D009D2C54 /* LianXiHuaXunViewController.m in Sources */,
+				1892BC3A1BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.m in Sources */,
 				1892BC2F1BB92085003CAC4C /* TYTextContainer+Extended.m in Sources */,
 				1892BC2D1BB92085003CAC4C /* TYImageStorage.m in Sources */,
 				1892BC2A1BB92085003CAC4C /* NSMutableAttributedString+TY.m in Sources */,
 				1892BC321BB92085003CAC4C /* TYViewStorage.m in Sources */,
-				1892BC031BB91898003CAC4C /* ViewController.m in Sources */,
 				1892BC2E1BB92085003CAC4C /* TYLinkTextStorage.m in Sources */,
 				1892BC2C1BB92085003CAC4C /* TYDrawStorage.m in Sources */,
 				1892BC151BB91AA1003CAC4C /* ShouYeViewController.m in Sources */,
+				1892BC3D1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.m in Sources */,
 				1892BC001BB91898003CAC4C /* AppDelegate.m in Sources */,
 				1892BBFD1BB91898003CAC4C /* main.m in Sources */,
 				1892BC311BB92085003CAC4C /* TYTextStorage.m in Sources */,
@@ -302,6 +344,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -345,6 +389,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

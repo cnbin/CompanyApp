@@ -7,6 +7,7 @@
 //
 
 #import "DianXingYingYongTableViewController.h"
+#import "DetailDianXingYingYongViewController.h"
 
 @interface DianXingYingYongTableViewController ()
 
@@ -16,7 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-         _sectionArray = [[NSMutableArray alloc]initWithObjects:
+    self.title =@"典型应用";
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     
+     @{NSFontAttributeName:[UIFont systemFontOfSize:14],
+       
+       NSForegroundColorAttributeName:[UIColor blackColor]}];
+    
+    NSString *dataFilePath = [[NSBundle mainBundle] pathForResource:@"dianXing" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:dataFilePath];
+    _rootDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    
+        _sectionArray = [[NSMutableArray alloc]initWithObjects:
                          @"公共服务",
                          @"政府部门",
                          @"事业单位",
@@ -25,7 +38,7 @@
                          nil];
     
     _gongZhongFuWuArray = [[NSMutableArray alloc]initWithObjects:
-                          @"公众服务",
+                          @"榕江通应用简介",
                           nil];
     
     _zhengFuBuMenArray = [[NSMutableArray alloc]initWithObjects:
@@ -71,7 +84,6 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    
     switch (section) {
         case 0:
             return @"公共服务";
@@ -91,7 +103,7 @@
         default:
             break;
     }
-    return self.title;
+    return 0;
 }
 
 #pragma mark - Table view data source
@@ -143,27 +155,37 @@
 
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
-    
+    UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 14.0 ];
+    cell.textLabel.font  = myFont;
     switch (section) {
         case 0:
+        {
             cell.textLabel.text = [_gongZhongFuWuArray objectAtIndex:row];
-
+          
+        }
             break;
         case 1:
-            cell.textLabel.text = [_zhengFuBuMenArray  objectAtIndex:row];
-
+        {
+            cell.textLabel.text = [_zhengFuBuMenArray objectAtIndex:row];
+                    }
             break;
         case 2:
+        {
             cell.textLabel.text = [_shiYeDanWeiArray objectAtIndex:row];
-
+  
+        }
             break;
         case 3:
+        {
             cell.textLabel.text = [_daXingQiYeArray objectAtIndex:row];
-
+        
+        }
             break;
         case 4:
+        {
             cell.textLabel.text = [_zhongXiaoQiYeArray objectAtIndex:row];
-
+     
+        }
             break;
 
         default:
@@ -177,9 +199,66 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
 
+    self.content = [[[_rootDict objectForKey:@"contentDict"]objectAtIndex:section]objectAtIndex:row];
+    
+    switch (section) {
+        case 0:
+        {
+            self.detailTitle = [_gongZhongFuWuArray objectAtIndex:row];
+         
+        }
+            break;
+        case 1:
+        {
+            self.detailTitle = [_zhengFuBuMenArray objectAtIndex:row];
+        }
+            break;
+        case 2:
+        {
+            self.detailTitle = [_shiYeDanWeiArray objectAtIndex:row];
+            
+        }
+            break;
+        case 3:
+        {
+            self.detailTitle = [_daXingQiYeArray objectAtIndex:row];
+            
+        }
+            break;
+        case 4:
+        {
+            self.detailTitle = [_zhongXiaoQiYeArray objectAtIndex:row];
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    if (section == 0) {
+        _isPutImage = true;
+    }
+    else
+    {
+        _isPutImage = false;
+    }
+
+    [self performSegueWithIdentifier:@"detailDianXingSegue" sender:nil];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"detailDianXingSegue"]){
+        
+        DetailDianXingYingYongViewController * de = segue.destinationViewController;
+        de.content = self.content;
+        de.detailTitle = self.detailTitle;
+        de.isPutImage = self.isPutImage;
+
+    }
+
+}
 
 @end

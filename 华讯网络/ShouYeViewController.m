@@ -7,7 +7,7 @@
 //
 
 #import "ShouYeViewController.h"
-#import "TYAttributedLabel.h"
+
 
 @interface ShouYeViewController ()
 @end
@@ -16,8 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     
+     @{NSFontAttributeName:[UIFont systemFontOfSize:14],
+       
+       NSForegroundColorAttributeName:[UIColor blackColor]}];
+    // Do any additional setup after loading the view.
+    self.title =@"首页";
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
     scrollView.contentSize = CGSizeMake(320, 700);
     [self.view addSubview:scrollView];
@@ -33,12 +39,15 @@
     label1.lineBreakMode = kCTLineBreakByTruncatingTail;
     //  label1.numberOfLines = 4;
     // 文本字体
-    label1.font = [UIFont systemFontOfSize:15];
+    label1.font = [UIFont systemFontOfSize:14];
     
     // 设置view的位置和宽，会自动计算高度
-    //[label1 sizeToFit];
-    [label1 setFrameWithOrign:CGPointMake(0, 0) Width:CGRectGetWidth(scrollView.frame)];
-
+    [label1 sizeToFit];
+    
+    [label1 setFrameWithOrign:CGPointMake(10, 10) Width: self.view.frame.size.width-20];
+    
+    //    label1.frame = CGRectMake(10, 0, 450,600);
+    
     [scrollView addSubview:label1];
     
     
