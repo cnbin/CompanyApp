@@ -22,6 +22,7 @@
      @{NSFontAttributeName:[UIFont systemFontOfSize:14],
        
        NSForegroundColorAttributeName:[UIColor blackColor]}];
+    
     // Do any additional setup after loading the view.
     self.title =@"首页";
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
@@ -45,8 +46,6 @@
     [label1 sizeToFit];
     
     [label1 setFrameWithOrign:CGPointMake(10, 10) Width: self.view.frame.size.width-20];
-    
-    //    label1.frame = CGRectMake(10, 0, 450,600);
     
     [scrollView addSubview:label1];
     

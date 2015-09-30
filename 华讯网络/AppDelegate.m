@@ -20,6 +20,15 @@
     
     [[UINavigationBar appearance]setBarTintColor:SystemThemeColor];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];//系统返回键的颜色
+    
+    UIBarButtonItem *appearance = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
+    
+    //设置导航栏的字体包括backBarButton和leftBarButton，rightBarButton的字体
+    NSDictionary *textAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize:10],
+                                     NSForegroundColorAttributeName: [UIColor whiteColor]
+                                  };
+
+    [appearance setTitleTextAttributes:textAttributes forState:1];//forState为0时为正常状态，为1时为点击状态。
     [NSThread sleepForTimeInterval:2.0];//设置启动页面时间
     
     return YES;

@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yIi-QD-yhm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1278" y="-122"/>
+            <point key="canvasLocation" x="1309" y="-122"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HtJ-4U-tv8">
@@ -61,7 +61,7 @@
         <scene sceneID="vU0-21-CMp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iTU-YD-hIX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" id="hRF-LA-Lhs"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="01" id="hRF-LA-Lhs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1OG-3Y-Nuy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -80,7 +80,7 @@
         <scene sceneID="r2L-wc-oya">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LWk-aB-zGb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="主要业务" id="vGr-Wl-dEm"/>
+                    <tabBarItem key="tabBarItem" title="主要业务" image="02" id="vGr-Wl-dEm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="y0M-OP-7Yj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -99,7 +99,7 @@
         <scene sceneID="nki-d5-yCk">
             <objects>
                 <navigationController id="L6e-lX-oXW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="联系华讯" id="MyX-cP-8RW"/>
+                    <tabBarItem key="tabBarItem" title="联系华讯" image="04" id="MyX-cP-8RW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fI9-8I-M7C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -123,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="irS-yJ-b0X">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LianXiHuaXunCellIdentifier" id="irS-yJ-b0X">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="irS-yJ-b0X" id="lJW-Qa-K7I">
@@ -150,7 +150,7 @@
         <scene sceneID="nvp-bM-hja">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jjV-4I-835" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="典型应用" id="i7N-3l-Pov"/>
+                    <tabBarItem key="tabBarItem" title="典型应用" image="03" id="i7N-3l-Pov"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2u3-po-V01">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -174,7 +174,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="57R-b4-5iu">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DianXingCellIdentifier" id="57R-b4-5iu">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="57R-b4-5iu" id="c0i-x6-G4c">
@@ -216,6 +216,12 @@
             <point key="canvasLocation" x="1989" y="1294"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="01" width="20" height="20"/>
+        <image name="02" width="20" height="20"/>
+        <image name="03" width="20" height="20"/>
+        <image name="04" width="20" height="20"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2MC-8p-EQf"/>
     </inferredMetricsTieBreakers>

@@ -66,7 +66,7 @@
 		1892BC391BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuYaoYeWuTableViewController.m; sourceTree = "<group>"; };
 		1892BC3B1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailDianXingYingYongViewController.h; sourceTree = "<group>"; };
 		1892BC3C1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailDianXingYingYongViewController.m; sourceTree = "<group>"; };
-		1892BC3E1BBA1D6B003CAC4C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+		1892BC3E1BBA1D6B003CAC4C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		189F44991BBA2BA900B17F63 /* dianXing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dianXing.json; sourceTree = "<group>"; };
 		18BD81A81BBA39EC009D2C54 /* zhuYaoYeWu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zhuYaoYeWu.json; sourceTree = "<group>"; };
 		18BD81AB1BBA3E0D009D2C54 /* LianXiHuaXunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LianXiHuaXunViewController.h; sourceTree = "<group>"; };
@@ -88,8 +88,8 @@
 		1892BBEF1BB91898003CAC4C = {
 			isa = PBXGroup;
 			children = (
-				1892BBFA1BB91898003CAC4C /* 华讯网络 */,
 				1892BBF91BB91898003CAC4C /* Products */,
+				1892BBFA1BB91898003CAC4C /* 华讯网络 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,18 +104,18 @@
 		1892BBFA1BB91898003CAC4C /* 华讯网络 */ = {
 			isa = PBXGroup;
 			children = (
-				18BD81AA1BBA3DE3009D2C54 /* LianXiHuaXun */,
-				1892BC371BBA1A84003CAC4C /* ZhuYaoYeWu */,
 				1892BC161BB9205C003CAC4C /* 3rdParty */,
 				1892BC331BB937DF003CAC4C /* DianXingYingYong */,
+				18BD81AA1BBA3DE3009D2C54 /* LianXiHuaXun */,
 				1892BC121BB91A03003CAC4C /* ShouYe */,
+				1892BBFB1BB91898003CAC4C /* Supporting Files */,
+				1892BC371BBA1A84003CAC4C /* ZhuYaoYeWu */,
 				1892BBFE1BB91898003CAC4C /* AppDelegate.h */,
 				1892BBFF1BB91898003CAC4C /* AppDelegate.m */,
-				1892BC041BB91898003CAC4C /* Main.storyboard */,
 				1892BC071BB91898003CAC4C /* Assets.xcassets */,
-				1892BC091BB91898003CAC4C /* LaunchScreen.storyboard */,
 				1892BC0C1BB91898003CAC4C /* Info.plist */,
-				1892BBFB1BB91898003CAC4C /* Supporting Files */,
+				1892BC091BB91898003CAC4C /* LaunchScreen.storyboard */,
+				1892BC041BB91898003CAC4C /* Main.storyboard */,
 			);
 			path = "华讯网络";
 			sourceTree = "<group>";
@@ -126,7 +126,7 @@
 				1892BC3E1BBA1D6B003CAC4C /* PrefixHeader.pch */,
 				1892BBFC1BB91898003CAC4C /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		1892BC121BB91A03003CAC4C /* ShouYe */ = {
@@ -135,7 +135,7 @@
 				1892BC131BB91AA1003CAC4C /* ShouYeViewController.h */,
 				1892BC141BB91AA1003CAC4C /* ShouYeViewController.m */,
 			);
-			name = ShouYe;
+			path = ShouYe;
 			sourceTree = "<group>";
 		};
 		1892BC161BB9205C003CAC4C /* 3rdParty */ = {
@@ -143,7 +143,7 @@
 			children = (
 				1892BC171BB92085003CAC4C /* TYAttributedLabel */,
 			);
-			name = 3rdParty;
+			path = 3rdParty;
 			sourceTree = "<group>";
 		};
 		1892BC171BB92085003CAC4C /* TYAttributedLabel */ = {
@@ -174,15 +174,15 @@
 		1892BC331BB937DF003CAC4C /* DianXingYingYong */ = {
 			isa = PBXGroup;
 			children = (
-				18BD81AE1BBA3F09009D2C54 /* lianXiHuaXun.json */,
-				18BD81A81BBA39EC009D2C54 /* zhuYaoYeWu.json */,
-				189F44991BBA2BA900B17F63 /* dianXing.json */,
-				1892BC341BB93816003CAC4C /* DianXingYingYongTableViewController.h */,
-				1892BC351BB93816003CAC4C /* DianXingYingYongTableViewController.m */,
 				1892BC3B1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.h */,
 				1892BC3C1BBA1D0E003CAC4C /* DetailDianXingYingYongViewController.m */,
+				1892BC341BB93816003CAC4C /* DianXingYingYongTableViewController.h */,
+				1892BC351BB93816003CAC4C /* DianXingYingYongTableViewController.m */,
+				189F44991BBA2BA900B17F63 /* dianXing.json */,
+				18BD81AE1BBA3F09009D2C54 /* lianXiHuaXun.json */,
+				18BD81A81BBA39EC009D2C54 /* zhuYaoYeWu.json */,
 			);
-			name = DianXingYingYong;
+			path = DianXingYingYong;
 			sourceTree = "<group>";
 		};
 		1892BC371BBA1A84003CAC4C /* ZhuYaoYeWu */ = {
@@ -191,7 +191,7 @@
 				1892BC381BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.h */,
 				1892BC391BBA1AA6003CAC4C /* ZhuYaoYeWuTableViewController.m */,
 			);
-			name = ZhuYaoYeWu;
+			path = ZhuYaoYeWu;
 			sourceTree = "<group>";
 		};
 		18BD81AA1BBA3DE3009D2C54 /* LianXiHuaXun */ = {
@@ -200,7 +200,7 @@
 				18BD81AB1BBA3E0D009D2C54 /* LianXiHuaXunViewController.h */,
 				18BD81AC1BBA3E0D009D2C54 /* LianXiHuaXunViewController.m */,
 			);
-			name = LianXiHuaXun;
+			path = LianXiHuaXun;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +304,7 @@
 				1892BC051BB91898003CAC4C /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		1892BC091BB91898003CAC4C /* LaunchScreen.storyboard */ = {
@@ -312,6 +313,7 @@
 				1892BC0A1BB91898003CAC4C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -334,8 +336,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yongmin Wu (3VCT48C2N3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yongmin Wu (3VCT48C2N3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yongmin Wu (5S24HFXQHV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yongmin Wu (5S24HFXQHV)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -345,7 +347,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "华讯网络/Supporting Files/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -356,10 +358,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "02ea2305-ad1e-4a36-827f-58a70fc056cb";
+				PROVISIONING_PROFILE = "caa6e42a-47e1-4edb-b596-b8452ad1a1df";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -381,8 +383,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yongmin Wu (3VCT48C2N3)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yongmin Wu (3VCT48C2N3)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yongmin Wu (5S24HFXQHV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yongmin Wu (5S24HFXQHV)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -390,16 +392,16 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "华讯网络/Supporting Files/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "02ea2305-ad1e-4a36-827f-58a70fc056cb";
+				PROVISIONING_PROFILE = "caa6e42a-47e1-4edb-b596-b8452ad1a1df";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -409,13 +411,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yongmin Wu (3VCT48C2N3)";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yongmin Wu (5S24HFXQHV)";
 				INFOPLIST_FILE = "华讯网络/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.huaxun.----.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "02ea2305-ad1e-4a36-827f-58a70fc056cb";
+				PROVISIONING_PROFILE = "caa6e42a-47e1-4edb-b596-b8452ad1a1df";
 			};
 			name = Debug;
 		};
@@ -423,13 +426,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yongmin Wu (3VCT48C2N3)";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yongmin Wu (5S24HFXQHV)";
 				INFOPLIST_FILE = "华讯网络/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.huaxun.----.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "02ea2305-ad1e-4a36-827f-58a70fc056cb";
+				PROVISIONING_PROFILE = "caa6e42a-47e1-4edb-b596-b8452ad1a1df";
 			};
 			name = Release;
 		};

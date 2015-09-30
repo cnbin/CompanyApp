@@ -21,7 +21,7 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:
      
-     @{NSFontAttributeName:[UIFont systemFontOfSize:14],
+     @{NSFontAttributeName:[UIFont systemFontOfSize:13],
        
        NSForegroundColorAttributeName:[UIColor blackColor]}];
     
@@ -147,7 +147,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"CellIdentifier";
+    static NSString *CellIdentifier = @"DianXingCellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
