@@ -7,6 +7,9 @@
 //
 
 #import "DetailDianXingYingYongViewController.h"
+#import "DetailTableViewCell.h"
+
+static NSString *CellIdentifier = @"TableCellIdentifier";
 
 @interface DetailDianXingYingYongViewController ()
 
@@ -16,41 +19,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.detailTitle;
+    
+    self.title = [GlobalResource sharedInstance].detailTitle;
+    self.tableView.allowsSelection = YES;
+    [self.tableView registerClass:[DetailTableViewCell class] forCellReuseIdentifier:CellIdentifier];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.delegate = self;
+    self.tableView.dataSource=self;
+}
 
-    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
-    scrollView.contentSize = CGSizeMake(320, 1050);
-    [self.view addSubview:scrollView];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(contentSizeCategoryChanged:)
+                                                 name:UIContentSizeCategoryDidChangeNotification
+                                               object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
     
-    TYAttributedLabel *label1 = [[TYAttributedLabel alloc]init];
-    label1.text = self.content;
- 
-    // 文字间隙
-    label1.characterSpacing = 2;
-    // 文本行间隙
-    label1.linesSpacing = 2;
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIContentSizeCategoryDidChangeNotification
+                                                  object:nil];
+}
+
+- (void)contentSizeCategoryChanged:(NSNotification *)notification {
+    [self.tableView reloadData];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    label1.lineBreakMode = kCTLineBreakByTruncatingTail;
-    // 文本字体
-    label1.font = [UIFont systemFontOfSize:14];
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    // 设置view的位置和宽，会自动计算高度
-    [label1 sizeToFit];
+    return 1;
     
-    [label1 setFrameWithOrign:CGPointMake(10, 10) Width: self.view.frame.size.width-20];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [scrollView addSubview:label1];
-    
-    if (_isPutImage) {
-        
-    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(20, label1.frame.size.height+20, self.view.frame.size.width-40, 200)];
-    
-    [imageView setImage:[UIImage imageNamed:@"4.jpeg"]];
-    [scrollView addSubview:imageView];
-        
+    DetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.detail_cell.text =[GlobalResource sharedInstance].content;
+    if ([GlobalResource sharedInstance].isPutImage) {
+        cell.img.image = [UIImage imageNamed:@"4.png"];
     }
-
+    [cell setNeedsUpdateConstraints];
+    [cell updateConstraintsIfNeeded];
+    return cell;
+    
 }
 
 - (void)didReceiveMemoryWarning {

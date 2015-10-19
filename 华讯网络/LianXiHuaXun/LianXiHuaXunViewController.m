@@ -71,19 +71,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSInteger row = indexPath.row;
-    self.content = [[_rootDict objectForKey:@"LianXiHuaXun"]objectAtIndex:row];
-     self.detailTitle = [_lianXiHuaXunArray objectAtIndex:row];
-    [self performSegueWithIdentifier:@"lianXiHuaXunSegue" sender:nil];
+
+    [GlobalResource sharedInstance].content = [[_rootDict objectForKey:@"LianXiHuaXun"]objectAtIndex:row];
+    [GlobalResource sharedInstance].detailTitle = [_lianXiHuaXunArray objectAtIndex:row];
+     [GlobalResource sharedInstance].isPutImage = NO;
+     [self performSegueWithIdentifier:@"lianXiHuaXunSegue" sender:nil];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if ([segue.identifier isEqualToString:@"lianXiHuaXunSegue"]){
-        DetailDianXingYingYongViewController * de = segue.destinationViewController;
-        de.content = self.content;
-        de.detailTitle = self.detailTitle;
-    }
-    
-}
+
 
 @end

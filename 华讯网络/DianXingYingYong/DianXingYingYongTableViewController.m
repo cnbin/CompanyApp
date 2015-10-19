@@ -155,7 +155,7 @@
 
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
-    UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 14.0 ];
+    UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 12.0];
     cell.textLabel.font  = myFont;
     switch (section) {
         case 0:
@@ -203,7 +203,6 @@
     NSInteger row = indexPath.row;
 
     self.content = [[[_rootDict objectForKey:@"contentDict"]objectAtIndex:section]objectAtIndex:row];
-    
     switch (section) {
         case 0:
         {
@@ -245,20 +244,30 @@
     {
         _isPutImage = false;
     }
-
-    [self performSegueWithIdentifier:@"detailDianXingSegue" sender:nil];
+    
+    [GlobalResource sharedInstance].content = self.content;
+    [GlobalResource sharedInstance].detailTitle = self.detailTitle;
+    [GlobalResource sharedInstance].isPutImage = self.isPutImage;
+   // NSLog(@"the content is %@",[GlobalResource sharedInstance].content);
+    
+   // [self performSegueWithIdentifier:@"detailDianXingSegue" sender:nil];
+    
+//    DetailDianXingYingYongViewController * detail = [[DetailDianXingYingYongViewController alloc]init];
+//    
+//    [self.navigationController pushViewController:detail animated:YES];
+  
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"detailDianXingSegue"]){
-        
-        DetailDianXingYingYongViewController * de = segue.destinationViewController;
-        de.content = self.content;
-        de.detailTitle = self.detailTitle;
-        de.isPutImage = self.isPutImage;
-
-    }
-
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"detailDianXingSegue"]){
+//        
+//        DetailDianXingYingYongViewController * de = segue.destinationViewController;
+//        de.content = self.content;
+//        de.detailTitle = self.detailTitle;
+//        de.isPutImage = self.isPutImage;
+//
+//    }
+//
+//}
 
 @end

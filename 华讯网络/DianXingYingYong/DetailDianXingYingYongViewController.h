@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailDianXingYingYongViewController : UIViewController
+@interface DetailDianXingYingYongViewController : UITableViewController
 
-@property (nonatomic,strong) NSString * content;
-@property (nonatomic,strong) NSString * detailTitle;
-@property (nonatomic,assign) NSInteger isPutImage;
+
+//@property (nonatomic,strong) UILabel *contentLabel;
+//@property (nonatomic,strong) UIScrollView *scrollView;
+
+
 @end

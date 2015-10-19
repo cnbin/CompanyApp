@@ -10,4 +10,6 @@
 
 @interface ShouYeViewController : UIViewController
 
+@property (strong, nonatomic) UILabel *contentLabel;
+
 @end
