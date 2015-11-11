@@ -5,25 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Shou Ye View Controller-->
-        <scene sceneID="2Jo-SX-sPR">
-            <objects>
-                <viewController id="12t-lY-lqT" customClass="ShouYeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="r1a-bz-xQH"/>
-                        <viewControllerLayoutGuide type="bottom" id="5nY-CR-yRp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oXZ-ss-V5V">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="5nP-Rk-fsP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pKw-K6-qjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1308" y="600"/>
-        </scene>
         <!--Zhu Yao Ye Wu Table View Controller-->
         <scene sceneID="5wW-Z1-dhC">
             <objects>
@@ -69,12 +50,38 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="12t-lY-lqT" kind="relationship" relationship="rootViewController" id="r5T-Td-Zfp"/>
+                        <segue destination="EDv-v8-qfs" kind="relationship" relationship="rootViewController" id="OFP-4M-FKa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFi-AH-crB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="635" y="600"/>
+        </scene>
+        <!--Shou Ye View Controller-->
+        <scene sceneID="7yZ-yN-pk2">
+            <objects>
+                <tableViewController id="EDv-v8-qfs" customClass="ShouYeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CoN-wb-m6a">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShouYeTableCellIdentifier" id="G8w-hy-6Ix">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G8w-hy-6Ix" id="OHZ-qq-c4a">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EDv-v8-qfs" id="gHs-Vy-HQN"/>
+                            <outlet property="delegate" destination="EDv-v8-qfs" id="eTC-uw-U2I"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="aAs-PC-1aX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxB-ac-2zM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1309.5" y="597"/>
         </scene>
         <!--主要业务-->
         <scene sceneID="r2L-wc-oya">
@@ -202,12 +209,15 @@
             <objects>
                 <tableViewController id="ece-Et-m3V" customClass="DetailDianXingYingYongViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tXE-QN-JAX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fwF-ww-sGH" customClass="TableCellIdentifier">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fwF-ww-sGH" id="MhU-Ei-hlw">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -230,7 +240,7 @@
         <image name="04" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vtw-4J-Aqq"/>
+        <segue reference="jag-fK-twH"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.20784313725490197" green="0.52549019607843139" blue="0.89411764705882357" alpha="1" colorSpace="calibratedRGB"/>
 </document>

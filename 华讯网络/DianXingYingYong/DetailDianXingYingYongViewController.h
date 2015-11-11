@@ -10,9 +10,4 @@
 
 @interface DetailDianXingYingYongViewController : UITableViewController
 
-
-//@property (nonatomic,strong) UILabel *contentLabel;
-//@property (nonatomic,strong) UIScrollView *scrollView;
-
-
 @end

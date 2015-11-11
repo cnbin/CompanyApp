@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShouYeViewController : UIViewController
+@interface ShouYeViewController : UITableViewController
 
 @property (strong, nonatomic) UILabel *contentLabel;
 

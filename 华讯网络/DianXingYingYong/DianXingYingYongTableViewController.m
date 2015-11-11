@@ -21,7 +21,7 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:
      
-     @{NSFontAttributeName:[UIFont systemFontOfSize:13],
+     @{NSFontAttributeName:[UIFont systemFontOfSize:16],
        
        NSForegroundColorAttributeName:[UIColor blackColor]}];
     
@@ -155,7 +155,7 @@
 
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
-    UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 12.0];
+    UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 13.0];
     cell.textLabel.font  = myFont;
     switch (section) {
         case 0:
@@ -193,6 +193,7 @@
     }
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     return cell;
 

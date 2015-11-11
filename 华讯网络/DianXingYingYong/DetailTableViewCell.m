@@ -28,7 +28,7 @@
         [self.detail_cell setNumberOfLines:0];
         [self.detail_cell setTextAlignment:NSTextAlignmentLeft];
         [self.detail_cell setTextColor:[UIColor blackColor]];
-        self.detail_cell.font = [UIFont fontWithName:@"Helvetica" size:12];
+        self.detail_cell.font = [UIFont fontWithName:@"Helvetica" size:14];
         [self.contentView addSubview:self.detail_cell];
         
         if ([GlobalResource sharedInstance].isPutImage) {

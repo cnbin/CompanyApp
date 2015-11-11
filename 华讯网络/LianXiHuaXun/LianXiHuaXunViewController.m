@@ -21,7 +21,7 @@
     
     [self.navigationController.navigationBar setTitleTextAttributes:
      
-     @{NSFontAttributeName:[UIFont systemFontOfSize:14],
+     @{NSFontAttributeName:[UIFont systemFontOfSize:16],
        
        NSForegroundColorAttributeName:[UIColor blackColor]}];
     
@@ -64,6 +64,8 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     UIFont *myFont = [ UIFont fontWithName: @"Arial" size: 14.0 ];
     cell.textLabel.font  = myFont;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     return cell;
     
 }

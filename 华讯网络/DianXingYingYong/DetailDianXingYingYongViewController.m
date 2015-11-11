@@ -73,6 +73,7 @@ static NSString *CellIdentifier = @"TableCellIdentifier";
     if ([GlobalResource sharedInstance].isPutImage) {
         cell.img.image = [UIImage imageNamed:@"4.png"];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell setNeedsUpdateConstraints];
     [cell updateConstraintsIfNeeded];
     return cell;

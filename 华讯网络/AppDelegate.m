@@ -7,13 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "MobClick.h"
+#import "BPush.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UIAlertViewDelegate>
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -26,13 +27,68 @@
     UIBarButtonItem *appearance = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
     
     //设置导航栏的字体包括backBarButton和leftBarButton，rightBarButton的字体
-    NSDictionary *textAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize:10],
+    NSDictionary *textAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize:12],
                                      NSForegroundColorAttributeName: [UIColor whiteColor]
                                   };
 
     [appearance setTitleTextAttributes:textAttributes forState:1];//forState为0时为正常状态，为1时为点击状态。
+    [NSThread sleepForTimeInterval:1.0];
+    [MobClick startWithAppkey:@"5631bf7a67e58e2d41002538" reportPolicy:BATCH channelId:@"Web"];
     
+    UIUserNotificationType myTypes = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:myTypes categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    
+    [BPush registerChannel:launchOptions apiKey:@"5rwY3ObL6NiI8YrjLSQGsj3l" pushMode:BPushModeProduction withFirstAction:nil withSecondAction:nil withCategory:nil isDebug:YES];
+    // App 是用户点击推送消息启动
+    NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    
+    if (userInfo) {
+        [BPush handleNotification:userInfo];
+
+    }
     return YES;
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    completionHandler(UIBackgroundFetchResultNewData);
+    
+    if (application.applicationState == UIApplicationStateActive || application.applicationState == UIApplicationStateBackground) {
+       // NSLog(@"acitve or background");
+        UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"收到一条消息" message:userInfo[@"aps"][@"alert"] delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alertView show];
+    }
+  
+}
+
+// 在 iOS8 系统中，还需要添加这个方法。通过新的 API 注册推送服务
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [application registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    //NSLog(@"test:%@",deviceToken);
+    [BPush registerDeviceToken:deviceToken];
+    [BPush bindChannelWithCompleteHandler:^(id result, NSError *error) {
+        
+        // 需要在绑定成功后进行 settag listtag deletetag unbind 操作否则会失败
+        if (result) {
+            [BPush setTag:@"Mytag" withCompleteHandler:^(id result, NSError *error) {
+                if (result) {
+              }
+            }];
+        }
+    }];
+}
+
+// 当 DeviceToken 获取失败时，系统会回调此方法
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    //NSLog(@"DeviceToken 获取失败，原因：%@",error);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
